@@ -1,30 +1,51 @@
 {
-  "name": "simplemicky",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "prepare": "is-ci || husky install"
-  },
-  "dependencies": {
-    "@types/node": "18.15.5",
-    "@types/react": "18.0.28",
-    "@types/react-dom": "18.0.11",
-    "eslint": "8.36.0",
-    "eslint-config-next": "13.2.4",
-    "next": "13.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "typescript": "5.0.2"
-  },
-  "devDependencies": {
-    "eslint-config-prettier": "^8.8.0",
-    "husky": "^8.0.0",
-    "is-ci": "^3.0.1",
-    "lint-staged": "^13.2.0",
-    "prettier": "^2.8.6"
-  }
+    "name": "simplemicky",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "sanity:dev": "sanity dev",
+        "sanity:start": "sanity start",
+        "sanity:build": "sanity build",
+        "sanity:deploy": "sanity deploy",
+        "sanity:deploy-graphql": "sanity graphql deploy",
+        "prepare": "is-ci || husky install"
+    },
+    "dependencies": {
+        "@portabletext/react": "^2.0.2",
+        "@sanity/icons": "2.2.2",
+        "@sanity/image-url": "^1.0.2",
+        "@sanity/ui": "1.3.0",
+        "@sanity/vision": "3.7.1",
+        "@types/node": "18.15.5",
+        "@types/react": "18.0.28",
+        "@types/react-dom": "18.0.11",
+        "eslint": "8.36.0",
+        "eslint-config-next": "13.2.4",
+        "next": "13.2.4",
+        "next-sanity": "^4.1.5",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-is": "18.2.0",
+        "sanity": "3.7.1",
+        "styled-components": "5.2.0",
+        "typescript": "5.0.2"
+    },
+    "devDependencies": {
+        "@sanity/eslint-config-studio": "2.0.1",
+        "@types/react": "^18.0.25",
+        "@types/styled-components": "5.1.26",
+        "autoprefixer": "10.4.14",
+        "eslint-config-prettier": "8.8.0",
+        "husky": "8.0.3",
+        "is-ci": "3.0.1",
+        "lint-staged": "13.2.0",
+        "postcss": "8.4.21",
+        "prettier": "2.8.6",
+        "prettier-plugin-tailwindcss": "0.2.5",
+        "tailwindcss": "3.2.7"
+    }
 }
