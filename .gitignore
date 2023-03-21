@@ -34,3 +34,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# yarn
+.yarn/unplugged
+.yarn/install-state.gz
+
+# IDEs
+.idea
+.vscode
