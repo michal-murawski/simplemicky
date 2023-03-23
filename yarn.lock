@@ -2323,6 +2323,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@popperjs/core@npm:^2.9.3":
+  version: 2.11.6
+  resolution: "@popperjs/core@npm:2.11.6"
+  checksum: 47fb328cec1924559d759b48235c78574f2d71a8a6c4c03edb6de5d7074078371633b91e39bbf3f901b32aa8af9b9d8f82834856d2f5737a23475036b16817f0
+  languageName: node
+  linkType: hard
+
 "@portabletext/react@npm:^1.0.6":
   version: 1.0.6
   resolution: "@portabletext/react@npm:1.0.6"
@@ -5506,6 +5513,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"flowbite@npm:^1.6.4":
+  version: 1.6.4
+  resolution: "flowbite@npm:1.6.4"
+  dependencies:
+    "@popperjs/core": ^2.9.3
+    mini-svg-data-uri: ^1.4.3
+  checksum: 926a530571678811cf93c0a2de7f4e46e5ee44f4758fc1c74badda3b1bc6863baf7a65bf86c11476d8a283c19fd9add8c3cbffc86fd8642de2b16ce9d0c382cd
+  languageName: node
+  linkType: hard
+
 "flush-write-stream@npm:^2.0.0":
   version: 2.0.0
   resolution: "flush-write-stream@npm:2.0.0"
@@ -7267,6 +7284,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mini-svg-data-uri@npm:^1.4.3":
+  version: 1.4.4
+  resolution: "mini-svg-data-uri@npm:1.4.4"
+  bin:
+    mini-svg-data-uri: cli.js
+  checksum: 997f1fbd8d59a70f03761e18626d335197a3479cb9d1ff75678e4b64b864d32a0b8fc18115eabde035e5299b8b4a354a78e57dd6ac10f9d604162a6170898d09
+  languageName: node
+  linkType: hard
+
 "minimatch@npm:^3.0.4, minimatch@npm:^3.0.5, minimatch@npm:^3.1.1, minimatch@npm:^3.1.2":
   version: 3.1.2
   resolution: "minimatch@npm:3.1.2"
@@ -7492,6 +7518,17 @@ __metadata:
     sanity: ^3
     styled-components: ^5.2
   checksum: 39e8caf86c72a0bfb5e95f5901559d24544a6a634ad2e400c0316dcd4645242a26e11324b4f6b2acb80a4efe065db0602ead05a89ba88573c4c022d8abc9772c
+  languageName: node
+  linkType: hard
+
+"next-themes@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "next-themes@npm:0.2.1"
+  peerDependencies:
+    next: "*"
+    react: "*"
+    react-dom: "*"
+  checksum: ebc248b956138e73436c4ed0a0f0a877a0a48a33156db577029b8b8469e48b5c777d61abf2baeb75953378febea74e067a4869ff90b4a3e94fce123289b862ba
   languageName: node
   linkType: hard
 
@@ -9252,11 +9289,13 @@ __metadata:
     eslint: 8.36.0
     eslint-config-next: 13.2.4
     eslint-config-prettier: 8.8.0
+    flowbite: ^1.6.4
     husky: 8.0.3
     is-ci: 3.0.1
     lint-staged: 13.2.0
     next: 13.2.4
     next-sanity: ^4.1.5
+    next-themes: ^0.2.1
     postcss: 8.4.21
     prettier: 2.8.6
     prettier-plugin-tailwindcss: 0.2.5
