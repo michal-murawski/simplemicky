@@ -1,19 +1,13 @@
-import {useTheme} from 'next-themes';
+import Link from "next/link";
 
 const Header = () => {
-    const {systemTheme, theme, setTheme} = useTheme();
-
-    const currentTheme = theme === 'system' ? systemTheme : theme;
-
-    console.log(theme)
-
     return (
         <header>
             <nav className="border-gray-200 bg-white px-4 py-2.5 dark:bg-gray-800 lg:px-6">
                 <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
                     <div className="flex items-center">
-                        <a
-                            href="/src/pages"
+                        <Link
+                            href="/"
                             className="flex items-center text-gray-900 dark:text-white"
                         >
                             <svg
@@ -33,7 +27,7 @@ const Header = () => {
                             <span className="font-semibold text-lg tracking-tight">
                                 Simplemickey.com
                             </span>
-                        </a>
+                        </Link>
                     </div>
                     {/*<button*/}
                     {/*    onClick={() =>*/}
