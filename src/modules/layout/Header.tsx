@@ -1,17 +1,17 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 const Header = () => {
     return (
         <header>
             <nav className="border-gray-200 bg-white px-4 py-2.5 dark:bg-gray-800 lg:px-6">
                 <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
-                    <div className="flex items-center">
+                    <div className="flex items-center gap-4">
                         <Link
                             href="/"
                             className="flex items-center text-gray-900 dark:text-white"
                         >
                             <svg
-                                className="h-6 w-6 mr-2"
+                                className="mr-2 h-6 w-6"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -24,9 +24,15 @@ const Header = () => {
                                     d="M12 6v6m0 0v6m0-6h6m-6 0H6"
                                 />
                             </svg>
-                            <span className="font-semibold text-lg tracking-tight">
+                            <span className="text-lg font-semibold tracking-tight">
                                 Simplemickey.com
                             </span>
+                        </Link>
+                        <Link
+                            href="/remover"
+                            className="mr-4 hover:underline md:mr-6 "
+                        >
+                            BG Remover
                         </Link>
                     </div>
                     {/*<button*/}
@@ -70,4 +76,4 @@ const Header = () => {
     );
 };
 
-export {Header};
+export { Header };
