@@ -34,6 +34,12 @@ const Header = () => {
                         >
                             BG Remover
                         </Link>
+                        <Link
+                            href="/designer"
+                            className="mr-4 hover:underline md:mr-6 "
+                        >
+                            Interior Designer
+                        </Link>
                     </div>
                     {/*<button*/}
                     {/*    onClick={() =>*/}

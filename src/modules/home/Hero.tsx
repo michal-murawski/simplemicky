@@ -1,16 +1,7 @@
 const Hero = () => {
     return (
-        <section className="m-4 rounded-lg shadow flex h-screen items-center justify-center bg-red-50 dark:bg-gray-900">
+        <section className="m-4 flex flex-1 items-center justify-center rounded-lg bg-red-50 shadow dark:bg-gray-900">
             <div className="mx-auto max-w-screen-xl py-8 px-4 text-center lg:py-16 lg:px-12">
-                <a
-                    href="#"
-                    className="mb-7 inline-flex items-center justify-between rounded-full bg-gray-100 py-1 px-1 pr-4 pl-4 text-sm text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
-                    role="alert"
-                >
-                    <span className="text-sm font-medium">
-                        Some content will appear, I promise
-                    </span>
-                </a>
                 <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
                     Simplemickey.com
                 </h1>

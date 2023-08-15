@@ -3,14 +3,16 @@ import { useState } from 'react';
 import { FaTrashAlt, FaDownload } from 'react-icons/fa';
 import { ThreeDots } from 'react-loader-spinner';
 import { saveAs } from 'file-saver';
-
+const themes = ['Modern', 'Vintage', 'Minimalist', 'Professional'];
+const rooms = ['Living Room', 'Dining Room', 'Bedroom', 'Bathroom', 'Office'];
 export default function Remover() {
     const [file, setFile] = useState<File | null>();
     const [error, setError] = useState('');
     const [outputImage, setOutputImage] = useState<string | null>(null);
     const [base64image, setBase64Image] = useState<string | null>(null);
     const [loading, setLoading] = useState(false);
-
+    const [theme, setTheme] = useState('Modern');
+    const [room, setRoom] = useState('Living Room');
     const acceptedFileTypes = {
         'image/jpeg': ['.jpeg', '.png'],
     };
@@ -55,12 +57,12 @@ export default function Remover() {
 
     const handleSubmit = async () => {
         setLoading(true);
-        const response = await fetch('/api/bgremover', {
+        const response = await fetch('/api/interiordesigner', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ image: base64image }),
+            body: JSON.stringify({ image: base64image, theme, room }),
         });
 
         let result = await response.json();
@@ -72,7 +74,7 @@ export default function Remover() {
             return;
         }
 
-        setOutputImage(result.output);
+        setOutputImage(result.output[1]);
         setLoading(false);
     };
 
@@ -87,9 +89,55 @@ export default function Remover() {
         <div className="mx-auto my-10 max-w-3xl flex-1 px-4">
             <section className="mb-10 text-center">
                 <h1 className="inline-block bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 bg-clip-text text-5xl font-semibold text-transparent">
-                    Remove background
+                    Interior Designer
                 </h1>
             </section>
+            <section className="mx-auto mb-12 w-full max-w-lg">
+                {/* Models */}
+                <div className="mb-6">
+                    <label
+                        className="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-300"
+                        htmlFor="themes"
+                    >
+                        Model
+                    </label>
+
+                    <select
+                        id="themes"
+                        className="mb-3 block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
+                        value={theme}
+                        onChange={(e) => setTheme(e.target.value)}
+                    >
+                        {themes.map((t, index) => (
+                            <option key={index} value={t}>
+                                {t}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+                {/* Room Types */}
+                <div className="mb-6">
+                    <label
+                        className="mb-2 block text-xs font-bold uppercase tracking-wide text-gray-300"
+                        htmlFor="rooms"
+                    >
+                        Room Type
+                    </label>
+                    <select
+                        id="rooms"
+                        className="mb-3 block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
+                        value={room}
+                        onChange={(e) => setRoom(e.target.value)}
+                    >
+                        {rooms.map((t, index) => (
+                            <option key={index} value={t}>
+                                {t}
+                            </option>
+                        ))}
+                    </select>
+                </div>{' '}
+            </section>
+
             <section className="mx-auto mb-12 w-full max-w-lg">
                 <div className="mb-2 w-full cursor-pointer rounded-md border-4 border-dashed border-gray-500 text-center text-gray-500">
                     <Dropzone
@@ -125,7 +173,7 @@ export default function Remover() {
                                 loading && 'cursor-progress'
                             }`}
                         >
-                            Remove background
+                            Design This Room
                         </button>
                     </div>
                 )}

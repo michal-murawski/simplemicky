@@ -22,6 +22,14 @@ const Footer = () => {
                                 BG Remover
                             </Link>
                         </li>
+                        <li>
+                            <Link
+                                href="/designer"
+                                className="mr-4 hover:underline md:mr-6 "
+                            >
+                                Interior Designer
+                            </Link>
+                        </li>
                     </ul>
                 </div>
                 <hr className="my-6 border-gray-200 dark:border-gray-700 sm:mx-auto lg:my-8" />
